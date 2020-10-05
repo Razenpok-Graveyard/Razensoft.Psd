@@ -11,8 +11,8 @@ namespace Razensoft.Psd.Tests
         [TestCase("files/header/channels-3.psb", 3)]
         public void Should_correctly_read_channel_count([NotNull] string path, int expectedChannelCount)
         {
-            using var psdFile = PhotoshopFile.Open(path);
-            psdFile.ChannelCount.Should()
+            using var photoshopFile = PhotoshopFile.Open(path);
+            photoshopFile.ChannelCount.Should()
                 .Be(expectedChannelCount);
         }
 
@@ -21,10 +21,10 @@ namespace Razensoft.Psd.Tests
         [TestCase("files/header/size-100x100.psb", 100, 100)]
         public void Should_correctly_read_image_size([NotNull] string path, int expectedHeight, int expectedWidth)
         {
-            using var psdFile = PhotoshopFile.Open(path);
-            psdFile.Height.Should()
+            using var photoshopFile = PhotoshopFile.Open(path);
+            photoshopFile.Height.Should()
                 .Be(expectedHeight);
-            psdFile.Width.Should()
+            photoshopFile.Width.Should()
                 .Be(expectedWidth);
         }
 
@@ -34,8 +34,8 @@ namespace Razensoft.Psd.Tests
         [TestCase("files/header/depth-8.psb", 8)]
         public void Should_correctly_read_depth([NotNull] string path, int expectedDepth)
         {
-            using var psdFile = PhotoshopFile.Open(path);
-            psdFile.Depth.Should()
+            using var photoshopFile = PhotoshopFile.Open(path);
+            photoshopFile.Depth.Should()
                 .Be(expectedDepth);
         }
 
@@ -45,8 +45,8 @@ namespace Razensoft.Psd.Tests
         [TestCase("files/header/color-mode-rgb.psb", ColorMode.Rgb)]
         public void Should_correctly_read_color_mode([NotNull] string path, ColorMode expectedColorMode)
         {
-            using var psdFile = PhotoshopFile.Open(path);
-            psdFile.ColorMode.Should()
+            using var photoshopFile = PhotoshopFile.Open(path);
+            photoshopFile.ColorMode.Should()
                 .Be(expectedColorMode);
         }
     }

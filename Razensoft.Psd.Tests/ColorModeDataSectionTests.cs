@@ -25,8 +25,8 @@ namespace Razensoft.Psd.Tests
         [TestCase("files/color-mode-data/empty.psd")]
         public void Should_correctly_read_empty_data_section([NotNull] string path)
         {
-            using var psdFile = PhotoshopFile.Open(path);
-            psdFile.ColorModeData.Should()
+            using var photoshopFile = PhotoshopFile.Open(path);
+            photoshopFile.ColorModeData.Should()
                 .BeEmpty();
         }
     }

@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using System.IO;
 using System.Text;
 using JetBrains.Annotations;
@@ -101,17 +102,17 @@ namespace Razensoft.Psd
             return BitConverter.ToUInt64(data, 0);
         }
 
-        public RectInt32 ReadRectInt32()
+        public Rectangle ReadRectangle()
         {
             var top = ReadInt32();
             var left = ReadInt32();
             var bottom = ReadInt32();
             var right = ReadInt32();
-            return new RectInt32(
-                top,
+            return Rectangle.FromLTRB(
                 left,
-                bottom,
-                right
+                top,
+                right,
+                bottom
             );
         }
 

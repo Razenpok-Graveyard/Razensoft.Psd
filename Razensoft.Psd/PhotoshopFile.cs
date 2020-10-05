@@ -63,6 +63,17 @@ namespace Razensoft.Psd
 
         public byte[] ImageResourcesData => _imageResourcesSection.Data;
 
+        public byte[] ImageData => _imageDataSection.Data;
+
+        public void Save()
+        {
+
+        }
+
+        public void SaveAs(string path)
+        {
+        }
+
         public void Dispose() => _stream?.Dispose();
 
         [NotNull]

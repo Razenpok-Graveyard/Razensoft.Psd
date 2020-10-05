@@ -1,3 +1,5 @@
+using System.Drawing;
+
 namespace Razensoft.Psd.Sections
 {
     internal class ImageDataSection

@@ -1,8 +1,10 @@
+using System.Drawing;
+
 namespace Razensoft.Psd.Sections.LayerMaskInformation
 {
     internal class LayerRecords
     {
-        public RectInt32 Bounds { get; }
+        public Rectangle Bounds { get; }
 
         public short ChannelCount { get; }
 
